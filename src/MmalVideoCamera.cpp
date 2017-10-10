@@ -331,7 +331,7 @@ void MmalVideoCamera::createCameraComponent()
 
 		// Flip the image
 		MMAL_PARAMETER_MIRROR_T mirror = {{MMAL_PARAMETER_MIRROR, sizeof(MMAL_PARAMETER_MIRROR_T)}, MMAL_PARAM_MIRROR_NONE};
-		mirror.value = MMAL_PARAM_MIRROR_BOTH;
+		mirror.value = MMAL_PARAM_MIRROR_NONE;
 		mmal_port_parameter_set(preview_port, &mirror.hdr);
 		mmal_port_parameter_set(video_port, &mirror.hdr);
 		mmal_port_parameter_set(still_port, &mirror.hdr);
